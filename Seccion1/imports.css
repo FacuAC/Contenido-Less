@@ -1,0 +1,18 @@
+div {
+  background-color: aquamarine;
+}
+div p span {
+  color: #70d636;
+  font-family: 'Roboto';
+  font-size: 20px;
+  line-height: 16px;
+}
+div button {
+  background-color: #70d636;
+}
+.content-especifico .import-especifico {
+  background-color: #0afaee;
+}
+.content-especifico .import-especifico div .import-especifico {
+  position: relative;
+}
