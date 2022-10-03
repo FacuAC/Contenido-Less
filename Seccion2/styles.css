@@ -1,0 +1,48 @@
+.content {
+  margin: 24px;
+}
+.sub-content {
+  width: 10px;
+}
+.parent-broth {
+  margin: 10px;
+}
+.parent-broth {
+  margin: 40px;
+}
+.operaciones-combinadas {
+  margin: 24px 20px 50px 12px;
+}
+/*Anidaciones*/
+.content {
+  background-color: black;
+  color: #FFF;
+}
+.content p {
+  color: red;
+  font-weight: 600;
+}
+.content p span {
+  font-size: 20px;
+}
+/*ejemplo malo porque el before esta separado de la clase*/
+.content p.text {
+  font-family: 'Roboto';
+}
+.content p.text ::before {
+  content: '';
+}
+/*end ejemplo malo porque el before esta separado de la clase*/
+/*ejemplo bueno porque el before esta junto con la clase*/
+.content {
+  padding: 2px;
+  color: #ff00ff;
+  box-shadow: rgba(0, 255, 0, 0.3);
+}
+.content p.text {
+  font-family: 'Roboto';
+}
+.content p.text::before {
+  content: '';
+}
+/*end ejemplo bueno porque el before esta junto con la clase*/

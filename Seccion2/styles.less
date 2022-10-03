@@ -1,0 +1,65 @@
+@marginGeneral: 20px;
+
+.content{
+    margin: (@marginGeneral + 4);
+}
+
+.sub-content{
+    width: (@marginGeneral / 2);
+}
+
+.parent-broth{
+    margin: (@marginGeneral - 10);
+}
+
+.parent-broth{
+    margin: (@marginGeneral * 2);
+}
+
+.operaciones-combinadas{
+    margin: (@marginGeneral + 4) @marginGeneral ((@marginGeneral * 2) + (@marginGeneral / 2)) 12px;
+}
+
+/*Anidaciones*/
+
+.content{
+    background-color: black;
+    color: #FFF;
+    p{
+        color: red;
+        font-weight: 600;
+        span{
+            font-size: 20px;
+        }
+    }
+}
+
+/*ejemplo malo porque el before esta separado de la clase*/
+.content{
+    p{
+        &.text{
+            font-family: 'Roboto';
+            ::before{
+                content:'';
+            }
+        }
+    }
+}
+/*end ejemplo malo porque el before esta separado de la clase*/
+
+
+/*ejemplo bueno porque el before esta junto con la clase*/
+.content{
+    padding: ceil(1.32px);
+    color: spin(#00ff00, 180);
+    box-shadow: fade(#00ff00, 30%);
+    p{
+        &.text{
+            font-family: 'Roboto';
+            &::before{
+                content:'';
+            }
+        }
+    }
+}
+/*end ejemplo bueno porque el before esta junto con la clase*/
