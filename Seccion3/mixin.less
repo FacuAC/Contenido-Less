@@ -59,3 +59,106 @@
 .por-defecto{
     .defaults();
 }
+
+//----------------------------------------------------------Condicionales-----------------------------------------------------------------*/
+
+.block(temaverde;){
+    background-color: #4acf60;
+    color: #4acf60;
+    border: 1px solid #4acf60;
+}
+
+.block(temaazul;){
+    background-color: #1d44c5;
+    color: #1d44c5;
+    border: 1px solid #1d44c5;
+}
+
+.style(temaverde;){
+    background-color: #4acf60;
+    color: #4acf60;
+    border: 1px solid #4acf60;
+}
+
+.style(temaazul; @color){
+    background-color: @color;
+    color: @color;
+    border: 1px solid @color;
+}
+
+/*------------------------------------------------------*/
+
+.header{
+    .block(temaverde);
+}
+
+.fooder{
+    .block(temaazul);
+}
+
+.home{
+    .style(temaverde;);
+}
+
+.menu{
+    .style(temaazul; #ce6f6f)
+}
+
+/*-----------------------WHEN-------------------------------*/
+
+/*---------------------Caso Particular mismo nombre de variables WHEN--------------------------------*/
+
+@width: 500px;
+.desktop(@width) when (@width <= 100px){
+    background-color: rgb(200, 255, 0);
+}
+
+.prueba{
+    .desktop(50px);
+    text-align: center;
+}
+
+/*---------------------End Caso Particular mismo nombre de variables WHEN--------------------------------*/
+
+/*---------------------Caso Particular distinto nombre de variables WHEN--------------------------------*/
+
+@myalto: 500px;
+.desktop1(@alto) when (@myalto <= 100px){
+    background-color: rgb(200, 255, 0);
+}
+
+.altura{
+    .desktop1(50px);
+    text-align: center;
+}
+
+/*---------------------End Caso Particular distinto nombre de variables WHEN--------------------------------*/
+
+/*-------------------------------------------Tipos de Condicionales-----------------------------------------------*/
+
+@paddinghome: 1500px;
+.condition-tradi() when (@paddinghome >= 768px){
+    background-color: #ce6f6f;
+}
+
+.condition-or() when (@paddinghome >= 768px), (@paddinghome <= 1400px){
+    background-color: #6fce77;    
+}
+
+.condition-and() when (@paddinghome >= 768px) and (@paddinghome <= 1400px){
+    background-color: #796fce;   
+}
+
+.condition-not() when (@paddinghome >= 768px) and not (@paddinghome = 0px){
+    background-color: #ce6f6f;   
+}
+
+.condicionales{
+    .condition-tradi();
+    .condition-or();
+    .condition-and();
+    .condition-not();
+    display: block;
+}
+
+/*-------------------------------------------End tipos de Condicionales-----------------------------------------------*/

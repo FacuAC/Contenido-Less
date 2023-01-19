@@ -44,3 +44,43 @@
   font-size: 14px;
   background-color: purple;
 }
+/*------------------------------------------------------*/
+.header {
+  background-color: #4acf60;
+  color: #4acf60;
+  border: 1px solid #4acf60;
+}
+.fooder {
+  background-color: #1d44c5;
+  color: #1d44c5;
+  border: 1px solid #1d44c5;
+}
+.home {
+  background-color: #4acf60;
+  color: #4acf60;
+  border: 1px solid #4acf60;
+}
+.menu {
+  background-color: #ce6f6f;
+  color: #ce6f6f;
+  border: 1px solid #ce6f6f;
+}
+/*-----------------------WHEN-------------------------------*/
+/*---------------------Caso Particular mismo nombre de variables WHEN--------------------------------*/
+.prueba {
+  background-color: #c8ff00;
+  text-align: center;
+}
+/*---------------------End Caso Particular mismo nombre de variables WHEN--------------------------------*/
+/*---------------------Caso Particular distinto nombre de variables WHEN--------------------------------*/
+.altura {
+  text-align: center;
+}
+/*---------------------End Caso Particular distinto nombre de variables WHEN--------------------------------*/
+/*-------------------------------------------Tipos de Condicionales-----------------------------------------------*/
+.condicionales {
+  background-color: #6fce77;
+  background-color: #ce6f6f;
+  display: block;
+}
+/*-------------------------------------------End tipos de Condicionales-----------------------------------------------*/
